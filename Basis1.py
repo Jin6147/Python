@@ -35,7 +35,7 @@ print('Hi, ', name)
 #條件成立要做的事情，要以縮排的方式放在條件句底下
 #else if在Python寫作elif
 
-grade = 90
+grade = 60
 # there's no ()
 if grade >= 90:
     print('Excellent!')

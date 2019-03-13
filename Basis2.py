@@ -20,6 +20,7 @@ print(type(r1))
 print(r1)
 print(r2)
 
+
 """ 若沒有給起始值，將預設為0
 若沒有給間隔，將預設為1
 遇到停止點後，創造的過程就會終止，因此Range中的數字將不會包含停止點 """
@@ -40,6 +41,7 @@ print(t1)
 print(t2)
 
 
+
 #List
 #List即為Python中的陣列(Array)。
 #如果你不知道什麼陣列也沒關係，讓哥來解釋給你聽。
@@ -49,11 +51,76 @@ print(t2)
 
 arr1 = [1, 2, 3]
 arr2 = [10, 'hello world', 8.7]
+#arr1[0]從1變成[1,2,3] 已經被取代了
 arr1[0] = [1, 2, 3]
+arr2.append('新增list數量')
+del arr1[1]
 
 print(type(arr1))
 print(arr1)
 print(arr2)
+
+#向List添加元素，方法有如下4种方法（append(),extend(),insert(), +加号）
+""" append() 追加单个元素到List的尾部，只接受一个参数
+list1=['a','b']
+list1.append('c')
+list1
+['a', 'b', 'c'] """
+
+#extend() 将一个列表中每个元素分别添加到另一个列表中，只接受一个参数；extend()相当于是将list B 连接到list A上。
+""" list1
+['a', 'b', 'c']
+list1.extend('d')
+list1
+['a', 'b', 'c', 'd']
+ """
+#3. insert() 将一个元素插入到列表中，但其参数有两个（如insert(1,"g")），第一个参数是索引点，即插入的位置，第二个参数是插入的元素。
+""" list1
+['a', 'b', 'c', 'd']
+list1.insert(1,'x')
+list1
+['a', 'x', 'b', 'c', 'd'] """
+
+#  + 加号，将两个list相加，会返回到一个新的list对象，注意与前三种的区别。
+#  前面三种方法（append, extend, insert）可对列表增加元素的操作，他们没有返回值，是直接修改了原数据对象。
+#   注意：将两个list相加，需要创建新的list对象，从而需要消耗额外的内存，
+#   特别是当list较大时，尽量不要使用“+”来添加list，而应该尽可能使用List的append()方法。
+"""
+list1=['a', 'x', 'b', 'c', 'd']
+list2=['y','z']
+list3=list1+list2
+list3
+['a', 'x', 'b', 'c', 'd', 'y', 'z'] """
+
+ 
+#list 刪除方法del  pop 切片删除 remove
+""" 使用del删除指定元素
+li = [1, 2, 3, 4]
+del li[3]
+print(li)
+# Output [1, 2, 3] """
+
+""" 2. 使用list方法pop删除元素
+li = [1, 2, 3, 4]
+li.pop(2)
+print(li)
+# Output [1, 2, 4] """
+#注：指定pop参数，将会删除该位置的元素；无参数时默认删除最后一个元素
+
+""" 3. 使用切片删除元素
+li = [1, 2, 3, 4]
+li = li[:2] + li[3:]
+print(li)
+# Output [1, 2, 4] """
+
+""" 4. 使用list方法remove删除指定值的元素
+li = [1, 2, 3, 4]
+li.remove(3)
+print(li)
+# Output [1, 2, 4]
+ """
+#remove方法删除指定值的元素，与其他方法不同。
+
 
 """ 宣告陣列可用[]
 陣列內的資料型別不必相同
